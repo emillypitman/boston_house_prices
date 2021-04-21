@@ -1,3 +1,19 @@
+# machine learning
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.tree import DecisionTreeRegressor
+from sklearn.neighbors import KNeighborsRegressor
+from sklearn.linear_model import LinearRegression
+import statsmodels.api as sm
+import numpy as np
+import pandas as pd
+
+# auxiliares modelagem
+from sklearn.model_selection import train_test_split
+from sklearn.model_selection import KFold
+from sklearn.metrics import r2_score, mean_squared_error
+from sklearn.model_selection import GridSearchCV, RandomizedSearchCV
+from sklearn.feature_selection import SelectKBest, RFE
+
 def generate_random_missings(df, target, number_of_columns=5):
     for _ in range(number_of_columns):
         col = random.choice(df.columns)
